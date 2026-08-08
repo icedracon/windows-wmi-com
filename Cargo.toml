@@ -1,0 +1,24 @@
+[package]
+name = "windows-wmi-com"
+version = "0.1.0-dev"
+edition = "2021"
+license = "MIT"
+authors = ["zevs"]
+description = "In-process WMI via COM: IWbemLocator/IWbemServices/IEnumWbemClassObject. Pre-alpha."
+repository = "https://github.com/icedracon/windows-wmi-com"
+
+[dependencies]
+windows = { version = "0.58", features = [
+    "Win32_System_Com",
+    "Win32_System_Wmi",
+    "Win32_System_Variant",
+    "Win32_System_Rpc",
+    "Win32_System_Ole",
+    "Win32_Foundation",
+] }
+windows-core = "0.58"
+thiserror = "2"
+
+[lib]
+name = "windows_wmi_com"
+path = "src/lib.rs"
