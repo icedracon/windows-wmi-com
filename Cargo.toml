@@ -4,8 +4,12 @@ version = "0.1.0-dev"
 edition = "2021"
 license = "MIT"
 authors = ["zevs"]
-description = "In-process WMI via COM: IWbemLocator/IWbemServices/IEnumWbemClassObject. Pre-alpha."
+description = "In-process WMI via COM (IWbemLocator/IWbemServices/IEnumWbemClassObject) — skips DCOM/RPC overhead for local queries. Pre-alpha"
 repository = "https://github.com/icedracon/windows-wmi-com"
+documentation = "https://docs.rs/windows-wmi-com"
+readme = "README.md"
+keywords = ["windows", "wmi", "com", "iwbem", "cim"]
+categories = ["os::windows-apis", "api-bindings"]
 
 [dependencies]
 windows = { version = "0.58", features = [
